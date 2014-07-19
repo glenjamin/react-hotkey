@@ -68,6 +68,15 @@ function describeKey(e) {
     if (e.key !== 'Unidentified') {
         desc.push(e.key);
         via = 'e.key' + (e.nativeEvent.key ? '' : ' polyfill');
+    } else if (e.nativeEvent.keyIdentifier) {
+        var keyId = e.nativeEvent.keyIdentifier;
+        if (keyId.substring(0, 2) === 'U+') {
+            var code = parseInt(keyId.substring(2), 16);
+            desc.push(String.fromCharCode(code));
+        } else {
+            desc.push(keyId);
+        }
+        via = 'e.keyIdentifier';
     } else if (specials[e.which]) {
         desc.push(specials[e.which]);
         via = 'e.which + lookup';
@@ -75,6 +84,8 @@ function describeKey(e) {
         desc.push(String.fromCharCode(e.which));
         via = 'e.which';
     }
+    e.persist();
+    console.log(e);
     return '{' + desc.join('+') + '} (' + via + ')';
 }
 
