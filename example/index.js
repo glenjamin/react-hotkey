@@ -18,7 +18,11 @@ var Component = React.createClass({
     render: function() {
         return React.DOM.div({},
             React.DOM.h1({},
-                "Hotkey Demo ",
+                React.DOM.a(
+                    {href: "https://github.com/glenjamin/react-hotkey"},
+                    "React-Hotkey"
+                ),
+                " Demo ",
                 React.DOM.a({onClick: this.clear}, "[clear]")
             ),
             this.state.keys.map(function(pressedKey, i) {
