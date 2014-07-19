@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "strict": false,
+    "quotes": false,
+    "curly": false,
+    "no-underscore-dangle": false,
+    "no-use-before-define": "nofunc",
+    "new-cap": false,
+    "no-unused-vars": [2, "all"],
+    "no-mixed-requires": [1, true],
+    "max-len": [1, 80, 4]
+  }
+}
