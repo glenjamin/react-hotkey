@@ -3,7 +3,8 @@ react-hotkey
 
 A simple mixin for application hotkeys.
 
-Provide a react synthetic event
+Provides a react synthetic event to the named event handler, but only when the
+component is mounted.
 
 
 Install
@@ -16,7 +17,9 @@ Usage
 -----
 
 ```js
-var hotkey.Mixin = require('react-hotkey');
+var hotkey = require('react-hotkey');
+// Enable event listening, can be safely called multiple times
+hotkey.activate();
 
 React.createClass({
     mixins: [hotkey.Mixin('handleHotkey')],

@@ -1,5 +1,5 @@
 var React = window.React = require('react');
-var hotkey = require('../');
+var hotkey = require('../').activate();
 
 var Component = React.createClass({
     displayName: 'Component',
@@ -54,6 +54,9 @@ var specials = {
     222: '\''
 };
 
+/**
+ * Produce a useful textual description of the key being handled
+ */
 function describeKey(e) {
     var via = '';
     var desc = [];
