@@ -6,6 +6,11 @@ A simple mixin for application hotkeys.
 Provides a react synthetic event to the named event handler, but only when the
 component is mounted.
 
+For more info, check out the
+[demo](https://rawgit.com/glenjamin/react-hotkey/master/example/index.html)
+from the
+[example](https://github.com/glenjamin/react-hotkey/tree/master/example)
+folder.
 
 Install
 -------
