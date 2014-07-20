@@ -10,10 +10,8 @@
     "react": "^0.11.0"
   },
   "devDependencies": {
-    "browserify": "^4.2.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "browserify": "^4.2.1",
+    "jest-cli": "^0.1.17"
   },
   "repository": {
     "type": "git",
@@ -28,5 +26,15 @@
   "bugs": {
     "url": "https://github.com/glenjamin/react-hotkey/issues"
   },
-  "homepage": "https://github.com/glenjamin/react-hotkey"
+  "homepage": "https://github.com/glenjamin/react-hotkey",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+      "unmockedModulePathPatterns": [
+        "<rootDir>/index.js",
+        "<rootDir>/test-utils.js",
+        "<rootDir>/node_modules/react"
+      ]
+  }
 }
