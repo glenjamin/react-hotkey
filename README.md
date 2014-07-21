@@ -1,7 +1,7 @@
 react-hotkey
 ============
 
-[https://travis-ci.org/glenjamin/react-hotkey.svg?branch=master](https://travis-ci.org/glenjamin/react-hotkey)
+![https://travis-ci.org/glenjamin/react-hotkey.svg?branch=master](https://travis-ci.org/glenjamin/react-hotkey)
 
 A simple mixin for application hotkeys.
 
