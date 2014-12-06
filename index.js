@@ -5,9 +5,12 @@ var documentListener;
 /**
  * Enable the global event listener. Is idempotent.
  */
-exports.activate = function() {
+exports.activate = function(event) {
+    if (!event) {
+        event = 'keyup';
+    }
     if (!documentListener) {
-        documentListener = EventListener.listen(document, 'keyup', handle);
+        documentListener = EventListener.listen(document, event, handle);
     }
     return exports;
 };
