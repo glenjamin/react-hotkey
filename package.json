@@ -7,7 +7,7 @@
     "example": "example"
   },
   "dependencies": {
-    "react": "^0.11.0"
+    "react": "~0.12.0"
   },
   "devDependencies": {
     "browserify": "^4.2.1",
