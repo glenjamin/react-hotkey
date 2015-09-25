@@ -28,6 +28,9 @@ Usage
 var hotkey = require('react-hotkey');
 // Enable event listening, can be safely called multiple times
 hotkey.activate();
+// The default is to listen for 'keyup' but you can listen to others by passing an argument
+hotkey.activate('keydown');
+
 
 React.createClass({
     mixins: [hotkey.Mixin('handleHotkey')],

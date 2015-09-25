@@ -1,7 +1,7 @@
 var EventListener = require('react/lib/EventListener');
 var SyntheticKeyboardEvent = require('react/lib/SyntheticKeyboardEvent');
 
-var documentListener;
+var documentListener = {};
 /**
  * Enable the global event listener. Is idempotent.
  */
@@ -9,18 +9,21 @@ exports.activate = function(event) {
     if (!event) {
         event = 'keyup';
     }
-    if (!documentListener) {
-        documentListener = EventListener.listen(document, event, handle);
+    if (!documentListener[event]) {
+        documentListener[event] = EventListener.listen(document, event, handle);
     }
     return exports;
 };
 /**
  * Disable the global event listener. Is idempotent.
  */
-exports.disable = function() {
-    if (documentListener) {
-        documentListener.remove();
-        documentListener = null;
+exports.disable = function(event) {
+    if (!event) {
+        event = 'keyup';
+    }
+    if (documentListener[event]) {
+        documentListener[event].remove();
+        documentListener[event] = null;
     }
 };
 

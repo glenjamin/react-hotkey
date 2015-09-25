@@ -19,7 +19,7 @@ describe('on-and-off', function() {
             triggerKey(document);
             expect(events.length).toBe(0);
         });
-        it('should start responding after disable() is called', function() {
+        it('should start responding to keyup only after activate() is called', function() {
             triggerKey(document);
             expect(events.length).toBe(0);
             var result = hotkey.activate();
@@ -27,8 +27,24 @@ describe('on-and-off', function() {
             expect(result).toBe(hotkey);
             triggerKey(document);
             expect(events.length).toBe(1);
+            triggerKey(document, null, 'keydown');
+            expect(events.length).toBe(1);
         });
+        it('should respond to both after activate() and activate("keydown") is called', function() {
+            triggerKey(document);
+            expect(events.length).toBe(0);
+            var result = hotkey.activate("keydown");
+            result = hotkey.activate();
+            // Can be chained
+            expect(result).toBe(hotkey);
+            triggerKey(document);
+            expect(events.length).toBe(1);
+            triggerKey(document, null, 'keydown');
+            expect(events.length).toBe(2);
+        });
+
     });
+
 
     describe("activate has been called", function() {
         beforeEach(function() {
