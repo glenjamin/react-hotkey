@@ -38,7 +38,8 @@
     "unmockedModulePathPatterns": [
       "<rootDir>/index.js",
       "<rootDir>/test-utils.js",
-      "<rootDir>/node_modules/react"
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/fbjs"
     ]
   }
 }
