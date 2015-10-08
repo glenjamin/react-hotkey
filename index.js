@@ -1,4 +1,4 @@
-var EventListener = require('react/lib/EventListener');
+var EventListener = require('fbjs/lib/EventListener');
 var SyntheticKeyboardEvent = require('react/lib/SyntheticKeyboardEvent');
 
 var documentListener = {};
