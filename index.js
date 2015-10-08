@@ -1,4 +1,4 @@
-var EventListener = require('fbjs/lib/EventListener');
+var listen = require('event-listener');
 var SyntheticKeyboardEvent = require('react/lib/SyntheticKeyboardEvent');
 
 var documentListener = {};
@@ -10,7 +10,7 @@ exports.activate = function(event) {
         event = 'keyup';
     }
     if (!documentListener[event]) {
-        documentListener[event] = EventListener.listen(document, event, handle);
+        documentListener[event] = listen(document, event, handle);
     }
     return exports;
 };

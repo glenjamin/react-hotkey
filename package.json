@@ -6,9 +6,6 @@
   "directories": {
     "example": "example"
   },
-  "dependencies": {
-    "fbjs": "^0.3.1"
-  },
   "devDependencies": {
     "browserify": "^4.2.1",
     "jest-cli": "^0.1.17",
@@ -39,7 +36,10 @@
       "<rootDir>/index.js",
       "<rootDir>/test-utils.js",
       "<rootDir>/node_modules/react",
-      "<rootDir>/node_modules/fbjs"
+      "<rootDir>/node_modules/event-listener"
     ]
+  },
+  "dependencies": {
+    "event-listener": "^1.1.0"
   }
 }
