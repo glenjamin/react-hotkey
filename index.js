@@ -31,6 +31,25 @@ exports.disable = function(event) {
 var handlers = [];
 
 /**
+ * Adds the function `handler` to the array of handlers invoked
+ * upon activated keyboard events.
+ */
+exports.addHandler = function(handler) {
+    handlers.push(handler);
+};
+
+/**
+ * Removes the function `handler`, which was previously added with
+ * `addHandler`, from the array of keyboard event handlers.
+ */
+exports.removeHandler = function(handler) {
+    var index = handlers.indexOf(handler);
+    if (index >= 0)
+        handlers.splice(index, 1);
+};
+
+
+/**
  * Mixin that calls `handlerName` on your component if it is mounted and a
  * key event has bubbled up to the document
  */

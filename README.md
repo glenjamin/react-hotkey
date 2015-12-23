@@ -41,6 +41,32 @@ React.createClass({
 })
 ```
 
+React Mixins do not work with ES2015. Instead one may use the `addHandler` and `removeHandler` functions:
+
+```js
+import React from 'react';
+import hotkey from 'react-hotkey';
+hotkey.activate();
+
+class MyComponent extends React.Component {
+    constructor() {
+        this.hotkeyHandler = this.handleHotkey.bind(this);
+    }
+
+    handleHotkey(e) {
+        console.log("hotkey", e);
+    }
+
+    componentDidMount() {
+        hotkey.addHandler(this.hotkeyHandler);
+    }
+
+    componentWillUnmount() {
+        hotkey.removeHandler(this.hotkeyHandler);
+    }
+}
+```
+
 
 Acknowledgements
 ----------------
