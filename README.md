@@ -22,6 +22,15 @@ Install
 As of version 0.7.0, React 15.4+ is required. If you're using an older version
 of react, then you should stick with 0.6.0.
 
+Warning
+-------
+
+This library relies on React's internals which is not officially supported.
+
+**Your build may break unexpectedly** even when simply upgrading React to a new minor version.
+
+PRs that solve this problem are welcome, see [this issue](https://github.com/glenjamin/react-hotkey/issues/11) for more information.
+
 Usage
 -----
 
