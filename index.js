@@ -1,5 +1,5 @@
 var listen = require('event-listener');
-var SyntheticKeyboardEvent = require('react/lib/SyntheticKeyboardEvent');
+var SyntheticKeyboardEvent = require('react-dom/lib/SyntheticKeyboardEvent');
 
 var documentListener = {};
 /**
