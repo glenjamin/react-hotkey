@@ -19,7 +19,8 @@ Install
 
     npm install react-hotkey --save
 
-react-hotkey does not declare an explicit dependency on React, but should be installed alongside it in your application. At the time of writing it has been tested with React 0.12.2
+As of version 0.7.0, React 15.4+ is required. If you're using an older version
+of react, then you should stick with 0.6.0.
 
 Usage
 -----
