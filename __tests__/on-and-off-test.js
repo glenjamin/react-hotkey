@@ -66,6 +66,9 @@ describe('on-and-off', function() {
 });
 
 var React = require('react');
+var ReactDOM = require('react-dom');
+var div = document.createElement("div");
+document.body.appendChild(div);
 function render() {
     var Component = React.createClass({
         mixins: [hotkey.Mixin('hotkey')],
@@ -76,5 +79,6 @@ function render() {
             return React.DOM.div({}, "div");
         }
     });
-    return React.renderComponent(Component(), document.body);
+    ReactDOM.unmountComponentAtNode(div);
+    return ReactDOM.render(React.createElement(Component), div);
 }

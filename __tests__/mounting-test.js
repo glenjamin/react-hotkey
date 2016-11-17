@@ -36,6 +36,9 @@ describe('mounting', function() {
 });
 
 var React = require('react');
+var ReactDOM = require('react-dom');
+var div = document.createElement("div");
+document.body.appendChild(div);
 function render() {
     var App = React.createClass({
         getInitialState: function() {
@@ -43,7 +46,7 @@ function render() {
         },
         render: function() {
             if (this.state.mount) {
-                return Component();
+                return React.createElement(Component);
             } else {
                 return null;
             }
@@ -58,5 +61,6 @@ function render() {
             return React.DOM.div({}, "div");
         }
     });
-    return React.renderComponent(App(), document.body);
+    ReactDOM.unmountComponentAtNode(div);
+    return ReactDOM.render(React.createElement(App), div);
 }

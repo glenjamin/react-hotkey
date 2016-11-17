@@ -1,6 +1,6 @@
 {
   "name": "react-hotkey",
-  "version": "0.6.1",
+  "version": "0.6.0",
   "description": "A simple mixin for application hotkeys with react",
   "main": "index.js",
   "directories": {
@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "browserify": "^4.2.1",
-    "jest-cli": "^0.1.17",
+    "jest": "^17.0.3",
+    "react": "^15.4.0",
     "react-dom": "^15.4.0"
   },
   "peerDependencies": {
@@ -32,12 +33,7 @@
     "test": "jest"
   },
   "jest": {
-    "unmockedModulePathPatterns": [
-      "<rootDir>/index.js",
-      "<rootDir>/test-utils.js",
-      "<rootDir>/node_modules/react-hotkey",
-      "<rootDir>/node_modules/event-listener"
-    ]
+    "resetModules": true
   },
   "dependencies": {
     "event-listener": "^1.1.0"
