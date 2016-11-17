@@ -13,6 +13,7 @@
   },
   "peerDependencies": {
     "react-dom": ">=15.4.0"
+    "react-dom": ">=15.4.0"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,7 @@
     "unmockedModulePathPatterns": [
       "<rootDir>/index.js",
       "<rootDir>/test-utils.js",
-      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-hotkey",
       "<rootDir>/node_modules/event-listener"
     ]
   },
