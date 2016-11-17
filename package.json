@@ -1,6 +1,6 @@
 {
   "name": "react-hotkey",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A simple mixin for application hotkeys with react",
   "main": "index.js",
   "directories": {
@@ -9,10 +9,10 @@
   "devDependencies": {
     "browserify": "^4.2.1",
     "jest-cli": "^0.1.17",
-    "react": "^0.12.0"
+    "react-dom": "^15.4.0"
   },
   "peerDependencies": {
-    "react": ">=0.12.0"
+    "react-dom": ">=15.4.0"
   },
   "repository": {
     "type": "git",
